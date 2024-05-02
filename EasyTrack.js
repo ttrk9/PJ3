@@ -5,7 +5,7 @@ import { MTLLoader } from "/libs/CS559-Three/examples/jsm/loaders/MTLLoader.js";
 import * as CANNON from "cannon-es";
 
 /**
- * Defines a simple track for the car and adds it to the specified world.
+ * Defines a simple track
  */
 export class EasyTrack extends GrObject {
     constructor(world, physicsWorld) {
