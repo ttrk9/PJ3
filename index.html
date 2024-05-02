@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <script type="importmap">
+      {
+        "imports": {
+          "three": "./libs/CS559-Three/build/three.module.js",
+          "cannon-es": "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.min.js",
+          "cannon-es-debugger": "https://cdn.jsdelivr.net/npm/cannon-es-debugger@1.0.0/+esm"
+        }
+      }
+  </script>
+  <script src="main.js" type="module" defer></script>
+
+  <div id="lapTimer" style="display:none; position: absolute; top: 10px; right: 10px; font-family: Arial, sans-serif; font-size: 18px; background-color: #007aff; color: #fff; padding: 5px 10px; border-radius: 5px;">
+  </div>
+  <div id="mainMenu" style="display: block;">
+    <div id="mainMenuContent"
+      style="background-color: #f8f8f8; border-radius: 10px; padding: 20px; text-align: center;">
+      <h1 style="font-family: Arial, sans-serif; font-size: 24px; color: #333;">Simple Car Game</h1>
+      <button id="startButton"
+        style="background-color: #007aff; color: #fff; border: none; border-radius: 5px; padding: 10px 20px; font-family: Arial, sans-serif; font-size: 18px; margin-right: 10px;">Start</button>
+      <button id="optionsButton"
+        style="background-color: #007aff; color: #fff; border: none; border-radius: 5px; padding: 10px 20px; font-family: Arial, sans-serif; font-size: 18px;">Options</button>
+    </div>
+  </div>
+
+  <div id="pauseMenu" style="display: none;">
+    <div id="pauseMenuContent"
+      style="background-color: #f8f8f8; border-radius: 10px; padding: 20px; text-align: center;">
+      <div id="pauseMenu" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div id="pauseMenuContent"
+          style="background-color: #f8f8f8; border-radius: 10px; padding: 20px; text-align: center;">
+          <h1 style="font-family: Arial, sans-serif; font-size: 24px; color: #333;">Paused</h1>
+          <button id="resumeButton"
+            style="background-color: #007aff; color: #fff; border: none; border-radius: 5px; padding: 10px 20px; font-family: Arial, sans-serif; font-size: 18px; margin-right: 10px;">Resume</button>
+          <button id="quitButton"
+            style="background-color: #007aff; color: #fff; border: none; border-radius: 5px; padding: 10px 20px; font-family: Arial, sans-serif; font-size: 18px;">Quit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="optionsMenu" style="display: none;">
+    <div id="optionsMenuContent"
+      style="background-color: #f8f8f8; border-radius: 10px; padding: 20px; text-align: center;">
+      <h1 style="font-family: Arial, sans-serif; font-size: 24px; color: #333;">Options</h1>
+      <button id="backButton"
+        style="background-color: #007aff; color: #fff; border: none; border-radius: 5px; padding: 10px 20px; font-family: Arial, sans-serif; font-size: 18px;">Back</button>
+      <div>
+        <label for="carSelect" style="font-family: Arial, sans-serif; font-size: 18px; color: #333;">Car:</label>
+        <select id="carSelect" style="font-family: Arial, sans-serif; font-size: 16px;">
+          <option value="car1" style="font-family: Arial, sans-serif; font-size: 16px;">BMW E46 M3 GTR</option>
+        </select>
+      </div>
+      <div>
+        <label for="trackSelect" style="font-family: Arial, sans-serif; font-size: 18px; color: #333;">Track:</label>
+        <select id="trackSelect" style="font-family: Arial, sans-serif; font-size: 16px;">
+          <option value="easy" style="font-family: Arial, sans-serif; font-size: 16px;">Easy</option>
+          <option value="hard" style="font-family: Arial, sans-serif; font-size: 16px;" >Hard</option>
+        </select>
+      </div>
+      </select>
+    </div>
+  </div>
+
+  <button id="showControlsButton"
+    style="background-color: #007aff; color: #fff; border: none; border-radius: 5px; padding: 10px 20px; font-family: Arial, sans-serif; font-size: 18px; margin: 0 auto; display: block; text-align: center;">Controls</button>
+  <div id="controlsMenu" style="display: none;">
+    <div id="controlsMenuContent"
+      style="background-color: #f8f8f8; border-radius: 10px; padding: 20px; text-align: center;">
+      <h1 style="font-family: Arial, sans-serif; font-size: 24px; color: #333;">Controls</h1>
+      <button id="backButton2"
+        style="background-color: #007aff; color: #fff; border: none; border-radius: 5px; padding: 10px 20px; font-family: Arial, sans-serif; font-size: 18px;">Back</button>
+      <div>
+        <p style="font-family: Arial, sans-serif; font-size: 18px; color: #333;">Move: WASD</p>
+      </div>
+      <div>
+        <p style="font-family: Arial, sans-serif; font-size: 18px; color: #333;">Switch to/from Freecam: C</p>
+      </div>
+      <div>
+        <p style="font-family: Arial, sans-serif; font-size: 18px; color: #333;">Switch to/from Bumper Cam: B</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
