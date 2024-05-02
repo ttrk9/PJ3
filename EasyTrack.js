@@ -16,14 +16,14 @@ export class EasyTrack extends GrObject {
 
         let baseTrack;
         mtlLoader.load(
-            '../assets/track/default.mtl', // path to your MTL file
+            '../assets/track/default.mtl', 
             function (materials) {
                 materials.preload();
                 objLoader.setMaterials(materials);
                 objLoader.load(
-                    '../assets/track/default.obj', // path to your OBJ file
+                    '../assets/track/default.obj', 
                     function (object) {
-                        // Manipulate the loaded object if needed (e.g., position, scale)
+                
                         object.scale.set(4, 4, 4);
                         let position = new T.Vector3(0, -.14, 0);
                         object.position.set(position.x, position.y, position.z);
@@ -70,14 +70,14 @@ export class EasyTrack extends GrObject {
 
         let curve1;
         mtlLoader.load(
-            '../assets/track/curve1.mtl', // path to your MTL file
+            '../assets/track/curve1.mtl', 
             function (materials) {
                 materials.preload();
                 objLoader.setMaterials(materials);
                 objLoader.load(
-                    '../assets/track/curve1.obj', // path to your OBJ file
+                    '../assets/track/curve1.obj',
                     function (object) {
-                        // Manipulate the loaded object if needed (e.g., position, scale)
+
                         object.scale.set(4, 4, 4);
                         let position = new T.Vector3(4, -.14, 8);
                         object.position.set(position.x, position.y, position.z);
@@ -103,14 +103,14 @@ export class EasyTrack extends GrObject {
         );
         let curve2;
         mtlLoader.load(
-            '../assets/track/curve2.mtl', // path to your MTL file
+            '../assets/track/curve2.mtl', 
             function (materials) {
                 materials.preload();
                 objLoader.setMaterials(materials);
                 objLoader.load(
-                    '../assets/track/curve2.obj', // path to your OBJ file
+                    '../assets/track/curve2.obj', 
                     function (object) {
-                        // Manipulate the loaded object if needed (e.g., position, scale)
+                      
                         object.scale.set(4, 4, 4);
                         let position = new T.Vector3(-4, -.14, 24);
                         object.position.set(position.x, position.y, position.z);
@@ -136,14 +136,14 @@ export class EasyTrack extends GrObject {
 
         let curve3;
         mtlLoader.load(
-            '../assets/track/curve3.mtl', // path to your MTL file
+            '../assets/track/curve3.mtl', 
             function (materials) {
                 materials.preload();
                 objLoader.setMaterials(materials);
                 objLoader.load(
-                    '../assets/track/curve3.obj', // path to your OBJ file
+                    '../assets/track/curve3.obj',
                     function (object) {
-                        // Manipulate the loaded object if needed (e.g., position, scale)
+                    
                         object.scale.set(4, 4, 4);
                         let position = new T.Vector3(8, -.14, -20);
                         object.position.set(position.x, position.y, position.z);
@@ -188,14 +188,14 @@ export class EasyTrack extends GrObject {
 
         let curve4;
         mtlLoader.load(
-            '../assets/track/curve4.mtl', // path to your MTL file
+            '../assets/track/curve4.mtl', 
             function (materials) {
                 materials.preload();
                 objLoader.setMaterials(materials);
                 objLoader.load(
-                    '../assets/track/curve4.obj', // path to your OBJ file
+                    '../assets/track/curve4.obj', 
                     function (object) {
-                        // Manipulate the loaded object if needed (e.g., position, scale)
+                       
                         object.scale.set(4, 4, 6);
                         object.rotation.y = Math.PI / 2;
                         let position = new T.Vector3(19, -.14, -24);
